@@ -4,6 +4,8 @@ A website that displays a message that can be changed by anyone who is willing t
 
 The financial workings of this app are coded in an ethereum smart contract.
 
+![Screenshot](screenshot.png)
+
 ## Install
 
 ```
