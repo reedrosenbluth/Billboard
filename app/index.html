@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Billboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+  <script src="./app.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div id="main">
+        <h1>Billboard</h1>
+        <h3 id="message"></h3>
+        <h4>price: <span id="price"></span> eth</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="six columns">
+        <h3>Buy Message</h3>
+        <p>In order to display your message on the billboard, you must pay a price greater than 
+          the price payed by the current messages author, displayed above.</p>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" placeholder="e.g., 95"></input>
+        <br>
+        <label for="desiredMessage">Message:</label>
+        <textarea class="u-full-width" placeholder="e.g., Hello World!" id="desiredMessage"></textarea>
+        <button id="send" onclick="App.buyMessage()">Buy Message</button>
+      </div>
+
+      <div class="six columns">
+        <h3>Withdraw Funds</h3>
+        <p>If someone replaces your message, you are entitled to the funds they deposited.</p>
+        <p>You may claim: <span id="funds"></span> eth</p>
+        <button id="send" onclick="App.withdraw()">Withdraw</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span id="status"></span>
+    </div>
+
+  </div>
+</body>
+
+</html>

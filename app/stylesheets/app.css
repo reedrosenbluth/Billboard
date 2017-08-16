@@ -1,0 +1,36 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 800px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+#main {
+  margin-bottom: 80px;
+}
+
+#message {
+  font-family: "Lora";
+  padding: 30px;
+  color: white;
+  background: black;
+  margin: 10px 0;
+}
+
+#funds {
+  font-weight: bold;
+}
+
+.black {
+  color: black;
+}
+
+.hint {
+  color: #666;
+}
