@@ -37,5 +37,10 @@
     "web3": "^0.18.4",
     "webpack": "^2.7.0",
     "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "bip39": "^2.4.0",
+    "ethereumjs-wallet": "^0.6.0",
+    "web3-provider-engine": "^13.2.9"
   }
 }

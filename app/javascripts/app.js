@@ -28,7 +28,12 @@ window.App = {
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
       if (err != null) {
-        alert("There was an error fetching your accounts.");
+        // alert("Please install https://metamask.io/ and setup and account.");
+        var message_element = document.getElementById("alert");
+        message_element.innerHTML = "You must install <a href='https://metamask.io'>MetaMask</a> to use Ether Shout.";
+        document.getElementById('interact').className += ' invisible';
+        document.getElementById('message').className += ' invisible';
+        document.getElementById('price').className += ' invisible';
         return;
       }
 
@@ -57,11 +62,11 @@ window.App = {
       bb = instance;
       return bb.getMessage.call({ from: account });
     }).then(function(message) {
-      var message_element = document.getElementById("message");
-      message_element.innerHTML = message.valueOf();
+      var message_element = document.getElementById("messagetext");
+      message_element.innerHTML = '"' + message.valueOf() + '"';
       return bb.getPrice.call({ from: account });
     }).then(function(price) {
-      var price_element = document.getElementById("price");
+      var price_element = document.getElementById("pricenum");
       price_element.innerHTML = price.toNumber() / 1000000000000000000;
       return bb.getPendingWithdrawal.call({ from: account });
     }).then(function(funds) {
@@ -100,7 +105,7 @@ window.App = {
     var bb;
     Billboard.deployed().then(function(instance) {
       bb = instance;
-      return bb.withdraw({ from: account, gas: 36000 });
+      return bb.withdraw({ from: account, gas: 40000 });
     }).then(function() {
       self.setStatus("Withdrawal complete!")
     }).catch(function(e) {

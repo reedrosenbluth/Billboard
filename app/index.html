@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <title>Billboard</title>
-  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+  <title>Ether Shout</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:400,600,800" rel="stylesheet">
   <script src="./app.js"></script>
 </head>
 
@@ -12,15 +12,16 @@
   <div class="container">
     <div class="row">
       <div id="main">
-        <h1>Billboard</h1>
-        <h3 id="message"></h3>
-        <h4>price: <span id="price"></span> eth</h4>
+        <h1 id="title">Shout Into The Ether</h1>
+        <h4 id="price">price: <span id="pricenum"></span> eth</h4>
+        <h3 id="message"><span id="messagetext"></span></h3>
+        <h3 id="alert"></h3>
       </div>
     </div>
 
-    <div class="row">
+    <div id="interact" class="row">
       <div class="six columns">
-        <h3>Buy Message</h3>
+        <h4>Buy Message</h4>
         <p>In order to display your message on the billboard, you must pay a price greater than 
           the price payed by the current messages author, displayed above.</p>
         <label for="amount">Amount:</label>
@@ -32,7 +33,7 @@
       </div>
 
       <div class="six columns">
-        <h3>Withdraw Funds</h3>
+        <h4>Withdraw Funds</h4>
         <p>If someone replaces your message, you are entitled to the funds they deposited.</p>
         <p>You may claim: <span id="funds"></span> eth</p>
         <button id="send" onclick="App.withdraw()">Withdraw</button>

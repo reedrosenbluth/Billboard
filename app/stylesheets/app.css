@@ -12,19 +12,38 @@ label {
 }
 
 #main {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+}
+
+#title {
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-top: 30px;
 }
 
 #message {
   font-family: "Lora";
   padding: 30px;
   color: white;
-  background: black;
-  margin: 10px 0;
+  background: blue;
+  margin-bottom: 0px;
+}
+
+#price {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 22px;
 }
 
 #funds {
   font-weight: bold;
+}
+
+.invisible {
+  display: none;
 }
 
 .black {
