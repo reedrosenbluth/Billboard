@@ -1,6 +1,6 @@
 # Billboard
 
-A website that displays a message that can be changed by anyone who is willing to pay a price greater than the current price. The price starts with 0 and increases with each message. A user whose message is replaced is entitled to the new message authors deposited funds.
+This website displays a message. The message can be changed by anyone who is willing to pay a price greater than what the previous author payed. The asking price starts at 0. If your message is replaced, you receive the payment made by the author who replaced your message.
 
 The financial workings of this app are coded in an ethereum smart contract.
 
